@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical" >
+    
+    <!-- 搜索框 -->
+    <LinearLayout 
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"       
+      	android:orientation="horizontal" >
+      	
+        <RelativeLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" > 
+        	<EditText
+           	 	android:id="@+id/search_input"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:padding="10dp"
+            	android:drawableLeft="@drawable/search"
+            	android:background="@drawable/edit_shape"
+   				android:layout_marginRight="10dp"
+            	android:singleLine="true"
+            	android:hint="@string/search_hint"
+            	android:textAppearance="?android:attr/textAppearanceMedium" />
+        	<RadioGroup
+         		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+         		android:orientation="horizontal"
+         		android:layout_below="@id/search_input"
+         		android:layout_centerInParent="true" >
+           			<RadioButton 
+                		android:id="@+id/search_outside"
+                 		android:layout_width="wrap_content"
+                 		android:layout_height="wrap_content"
+                 		android:text="@string/search_outside"
+                 		android:checked="true"/>
+           		                
+            		<RadioButton 
+                 		android:id="@+id/search_inside"
+                 		android:layout_width="wrap_content"
+                 		android:layout_height="wrap_content"
+                 		android:text="@string/search_inside" />
+            		
+    		</RadioGroup>
+        </RelativeLayout>
+        
+        <Button
+           	android:id="@+id/search"
+           	android:layout_width="wrap_content"
+           	android:layout_height="wrap_content"
+           	android:gravity="center"       
+           	android:textStyle="bold"
+           	android:background="@drawable/button"
+           	android:layout_marginTop="18dp"
+           	android:textAppearance="?android:attr/textAppearanceMedium"
+           	android:text="@string/action_search"  />
+     </LinearLayout>   
+
+
+    <!-- 搜索结果 -->
+    
+    <ListView 
+        android:id="@+id/search_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>

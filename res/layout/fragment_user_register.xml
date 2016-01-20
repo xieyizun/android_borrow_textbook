@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+    
+    <!-- 用户名 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/login_user_name" />
+
+    <EditText
+        android:id="@+id/register_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="10"
+        android:inputType="textPersonName" 
+        android:hint="@string/user_name_hint" >
+    </EditText>
+	
+    <!-- 邮箱 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/register_user_email" />
+
+    <EditText
+        android:id="@+id/register_user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/register_user_email_hint" >
+    </EditText>
+    
+    <!-- 密码 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/login_password" />
+
+    <EditText
+        android:id="@+id/register_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/user_password_hint" >
+    </EditText>
+    
+    <!-- 再次输入密码 -->
+	<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/register_user_repeate_password" />
+
+    <EditText
+        android:id="@+id/register_user_repeat_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/register_user_repeate_password_hint" >
+    </EditText>
+    
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:text="@string/action_register" />   
+</LinearLayout>
